@@ -66,10 +66,6 @@ header {
     }
 }
 /*start index*/
-////////////////
-main {
-    grid-template-rows: [header] 0.8fr [content] repeat(10, 1.6fr) [footer] 0.2712fr;
-}
 /*section_slider-carousel*/
 .slider-carousel {
     display: grid;
@@ -316,6 +312,7 @@ main {
     display: grid;
     grid-template-columns: [left-gutter] 1fr [content] repeat(4, 0.8fr) [right-gutter] 1fr;
     grid-template-rows: 1fr;
+    height: 16em;
     .download {
         @include links (#000, #ffe400);
         grid-column: 2 / 3;
@@ -352,14 +349,22 @@ main {
             padding-top: 7%;
         } 
     }
-    .back {
-        grid-column: 4 / end;
-        grid-row: 1 / 1;
-        width: 100%;
-    }
     .looking-for {
         grid-column: 4 / 6;
         grid-row: 1 / 1;
+        background: url('../img/38391858-modern-skyscrapers-in-business-district-at-sunset.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        input {
+            margin: 16% 0 0 0%;
+            width: 100%;
+            height: 1.1em;
+            display: block;
+            opacity: 0.7;
+            text-decoration: underline;
+            border: none;
+            padding: 2% 0 2% 1%;
+        }
     }
 }
 /* section_information */
@@ -1945,46 +1950,156 @@ and (max-width : 540px) {
         font-size: 5px;
     }
     header{
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+        .logo {
+            grid-column: 2 / 2;
+            width: 40%;
+            padding-top: 15%;
+            padding-left: 50%;
+        }
+        nav {
+            grid-column: 5 / 6;
+            ul {
+                padding-top: 25%;
+                margin-left: -30%;
+            }
+            li {
+                display: inline-block;
+                padding: 0 1%;
+                img {
+                    width: 53%;
+                }
+            }
+            .burger {
+                position: absolute;
+                top: 12%;
+                right: 5%;
+            }
+            .sub-menu-burger {
+                margin: 0;
+            }
+        }
+    
+        .shop {
+            img {
+                width: 50%;
+                margin-top: -15%;
+            }
+        }
     }
     .slider-carousel{
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+        height: 45em;
     }
     .services{
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+        height: 30em;
+        .controls {
+            min-width: 14.3125em;
+            min-height: 14.3125em;
+        }
     }
     .price-contact-search{
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+        height: 15em;
     }
-    .information{
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    .information{ 
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+        .news-review {
+            .news {
+                min-width: 14.3125em;
+                .slider-news .slick-dots {
+                    right: 10%;
+                    li {
+                    margin: 0;
+                    }
+                }
+            }
+            .review {
+                height: 17.5em;
+            }
+        }
     }
     .portfolio{
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+        .controls {
+            min-width: 14.3125em;
+            min-height: 15.3125em;
+        }
     }
     // our services
     .promo {
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
     }
     .main-information {
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+        .popular-posts {
+            .slider-posts {
+                .slick-dots{
+                    bottom: -40%;
+                    right: 5%;
+                    li {
+                        margin: 0;
+                    }
+                }
+            }
+        }
     }
     // post page
     .promo-post-page {
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+    }
+    .slider-post-page {
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+        .slides {
+            .slick-slider-post-page {
+                span {
+                    .facebook-icon {
+                        width: 40%;
+                    }
+                    .twitter-icon {
+                        width: 40%;
+                    }
+                    .google-plus-icon {
+                        width: 40%;
+                    }
+                }
+            }
+        }
     }
     .content-post-page {
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+        grid-template-rows: repeat(6, minmax(10em, 20em)) minmax(4.2em, 4.2em);
+        .popular-posts-post-page {
+            .slider-posts .slick-dots {
+                bottom: -1.5%;
+                right: 5%;
+                li {
+                    margin: 0;
+                }
+            }
+        }
+        .sidebar-photo-post-page {
+            .triangle {
+                visibility: hidden;
+            }
+        }
+        .comments {
+            grid-row: 5 / end;
+        }
     }
     // news&events
     .promo-news-events {
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
     }
     .content-news-events {
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
     } 
     footer{
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+        ul {
+            margin-left: -25%;
+        }
     }
 }
 

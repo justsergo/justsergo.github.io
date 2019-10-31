@@ -425,11 +425,6 @@ header .shop img {
 }
 
 /*start index*/
-main {
-  -ms-grid-rows: [header] 0.8fr [content] (1.6fr)[10] [footer] 0.2712fr;
-      grid-template-rows: [header] 0.8fr [content] repeat(10, 1.6fr) [footer] 0.2712fr;
-}
-
 /*section_slider-carousel*/
 .slider-carousel {
   display: -ms-grid;
@@ -1025,6 +1020,7 @@ main {
       grid-template-columns: [left-gutter] 1fr [content] repeat(4, 0.8fr) [right-gutter] 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
+  height: 16em;
 }
 
 .price-contact-search .download {
@@ -1123,19 +1119,26 @@ main {
   padding-top: 7%;
 }
 
-.price-contact-search .back {
-  grid-column: 4 / end;
-  -ms-grid-row: 1;
-  grid-row: 1 / 1;
-  width: 100%;
-}
-
 .price-contact-search .looking-for {
   -ms-grid-column: 4;
   -ms-grid-column-span: 2;
   grid-column: 4 / 6;
   -ms-grid-row: 1;
   grid-row: 1 / 1;
+  background: url("../img/38391858-modern-skyscrapers-in-business-district-at-sunset.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.price-contact-search .looking-for input {
+  margin: 16% 0 0 0%;
+  width: 100%;
+  height: 1.1em;
+  display: block;
+  opacity: 0.7;
+  text-decoration: underline;
+  border: none;
+  padding: 2% 0 2% 1%;
 }
 
 /* section_information */
@@ -4406,56 +4409,152 @@ footer a:hover {
     font-size: 5px;
   }
   header {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+  }
+  header .logo {
+    -ms-grid-column: 2;
+    grid-column: 2 / 2;
+    width: 40%;
+    padding-top: 15%;
+    padding-left: 50%;
+  }
+  header nav {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+    grid-column: 5 / 6;
+  }
+  header nav ul {
+    padding-top: 25%;
+    margin-left: -30%;
+  }
+  header nav li {
+    display: inline-block;
+    padding: 0 1%;
+  }
+  header nav li img {
+    width: 53%;
+  }
+  header nav .burger {
+    position: absolute;
+    top: 12%;
+    right: 5%;
+  }
+  header nav .sub-menu-burger {
+    margin: 0;
+  }
+  header .shop img {
+    width: 50%;
+    margin-top: -15%;
   }
   .slider-carousel {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+    height: 45em;
   }
   .services {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+    height: 30em;
+  }
+  .services .controls {
+    min-width: 14.3125em;
+    min-height: 14.3125em;
   }
   .price-contact-search {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+    height: 15em;
   }
   .information {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+  }
+  .information .news-review .news {
+    min-width: 14.3125em;
+  }
+  .information .news-review .news .slider-news .slick-dots {
+    right: 10%;
+  }
+  .information .news-review .news .slider-news .slick-dots li {
+    margin: 0;
+  }
+  .information .news-review .review {
+    height: 17.5em;
   }
   .portfolio {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+  }
+  .portfolio .controls {
+    min-width: 14.3125em;
+    min-height: 15.3125em;
   }
   .promo {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
   }
   .main-information {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+  }
+  .main-information .popular-posts .slider-posts .slick-dots {
+    bottom: -40%;
+    right: 5%;
+  }
+  .main-information .popular-posts .slider-posts .slick-dots li {
+    margin: 0;
   }
   .promo-post-page {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+  }
+  .slider-post-page {
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+  }
+  .slider-post-page .slides .slick-slider-post-page span .facebook-icon {
+    width: 40%;
+  }
+  .slider-post-page .slides .slick-slider-post-page span .twitter-icon {
+    width: 40%;
+  }
+  .slider-post-page .slides .slick-slider-post-page span .google-plus-icon {
+    width: 40%;
   }
   .content-post-page {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+    -ms-grid-rows: (minmax(10em, 20em))[6] minmax(4.2em, 4.2em);
+        grid-template-rows: repeat(6, minmax(10em, 20em)) minmax(4.2em, 4.2em);
+  }
+  .content-post-page .popular-posts-post-page .slider-posts .slick-dots {
+    bottom: -1.5%;
+    right: 5%;
+  }
+  .content-post-page .popular-posts-post-page .slider-posts .slick-dots li {
+    margin: 0;
+  }
+  .content-post-page .sidebar-photo-post-page .triangle {
+    visibility: hidden;
+  }
+  .content-post-page .comments {
+    grid-row: 5 / end;
   }
   .promo-news-events {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
   }
   .content-news-events {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
   }
   footer {
-    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0.1fr;
-        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0.1fr;
+    -ms-grid-columns: [left-gutter] 0.1fr [content] (0.8fr)[4] [right-gutter] 0fr;
+        grid-template-columns: [left-gutter] 0.1fr [content] repeat(4, 0.8fr) [right-gutter] 0fr;
+  }
+  footer ul {
+    margin-left: -25%;
   }
 }
 
